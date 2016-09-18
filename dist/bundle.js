@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ade5270efbc8e2ac60e6"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ad2f9a926f77ebce463e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -6114,7 +6114,7 @@
 
 
 	// module
-	exports.push([module.id, ".hidden {\n  display: none; }\n\nbody {\n  color: #cdcdcd;\n  font-family: 'Gudea', sans-serif;\n  font-family: 'Syncopate', sans-serif;\n  font-family: 'Advent Pro', sans-serif;\n  background-color: #e9e9e9;\n  margin: none;\n  padding: none; }\n\nh1 {\n  color: #373737; }\n\n#mdArea, #muArea {\n  padding: 5%;\n  border: none;\n  background-color: white;\n  border-radius: 0%;\n  height: 60vh;\n  width: 45vw;\n  width: 100%; }\n\n#mdArea {\n  font-size: 1.5vw;\n  margin-right: none;\n  color: #88bbd6;\n  background-color: #373737; }\n\n#muArea {\n  text-align: left;\n  overflow: scroll;\n  background-color: white;\n  color: #373737;\n  margin-left: none; }\n\n#mdArea:active, #mdArea:focus {\n  outline: none;\n  border: none; }\n\n#cheatSheet {\n  font-size: 150%;\n  color: #373737; }\n\n#BackBtn {\n  margin-top: 5%; }\n\n#appContainer, #cheatSheet {\n  padding: 5%;\n  padding-top: 0%;\n  margin-top: 0%; }\n\n#mainTitle {\n  margin-top: 0%;\n  padding-top: 5%;\n  padding-left: 2%;\n  margin-left: 0%; }\n  #mainTitle h1 {\n    font-size: 300%; }\n\n#footer {\n  padding-top: 0%;\n  padding-bottom: 0%;\n  color: #373737; }\n  #footer a {\n    color: #88bbd6; }\n\n.modal-container {\n  position: relative; }\n\n.modal-container .modal, .modal-container .modal-backdrop {\n  position: absolute; }\n", ""]);
+	exports.push([module.id, "@media only screen and (max-width: 680px) {\n  #layout {\n    background-color: red; } }\n\n@media only screen and (min-width: 240px) {\n  #layout {\n    background-color: red; } }\n\nbody {\n  background-color: #e9e9e9;\n  font-family: 'Syncopate', sans-serif;\n  margin: none;\n  padding: none; }\n\n#layout {\n  background-color: #e9e9e9;\n  margin: none;\n  padding: none;\n  height: 100%;\n  width: 100%; }\n  #layout .appBtn, #layout .appBtn:hover, #layout .appBtn:active, #layout .appBtn:focus, #layout .appBtn:visited {\n    outline: none;\n    color: #88bbd6; }\n\n#appContainer, #cheatSheet {\n  background-color: #e9e9e9;\n  padding: 3%;\n  padding-top: 0%;\n  margin-top: 0%; }\n\n#mdArea, #muArea {\n  margin: none;\n  padding: 5%;\n  border: none;\n  border-radius: 0%;\n  height: 60vh;\n  width: 45vw;\n  width: 100%; }\n\n#mdArea {\n  color: #cdcdcd;\n  font-size: 1.5vw;\n  margin-right: none;\n  background-color: #373737; }\n\n#muArea {\n  background-color: white;\n  text-align: left;\n  overflow: scroll;\n  margin-left: none; }\n\n#mdArea:active, #mdArea:focus {\n  outline: none;\n  border: none; }\n\n#cheatSheet {\n  font-size: 125%; }\n\n#mainTitle {\n  text-align: left;\n  margin-top: 0%;\n  padding-top: 0%;\n  padding-left: 4.5%;\n  margin-left: 0%; }\n  #mainTitle h1 {\n    font-size: 300%; }\n\n#footer {\n  padding-top: 0%;\n  padding-bottom: 0%; }\n\n.modal-container {\n  position: relative; }\n\n.modal-container .modal, .modal-container .modal-backdrop {\n  position: absolute; }\n", ""]);
 
 	// exports
 
@@ -15608,15 +15608,6 @@
 	          { id: 'appContainer', className: 'container-fluid' },
 	          _react2.default.createElement(
 	            'div',
-	            { id: 'mainTitle', className: 'row-fluid' },
-	            _react2.default.createElement(
-	              'h1',
-	              null,
-	              'Live Markdown Preview'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
 	            { className: 'row-fluid' },
 	            _react2.default.createElement(
 	              'div',
@@ -15674,7 +15665,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
+			value: true
 	});
 
 	var _react = __webpack_require__(6);
@@ -15731,282 +15722,292 @@
 	// export default Layout
 
 	var Layout = _react2.default.createClass({
-	  displayName: 'Layout',
-	  getInitialState: function getInitialState() {
-	    return { show: false };
-	  },
-	  render: function render() {
-	    var _this = this;
+			displayName: 'Layout',
+			getInitialState: function getInitialState() {
+					return { show: false };
+			},
+			render: function render() {
+					var _this = this;
 
-	    var close = function close() {
-	      return _this.setState({ show: false });
-	    };
-	    return _react2.default.createElement(
-	      'div',
-	      { className: 'text-center modal-container', style: { height: 1000 } },
-	      _react2.default.createElement(
-	        _Button2.default,
-	        { className: 'text-center', onClick: function onClick() {
-	            return _this.setState({ show: true });
-	          } },
-	        'CheatSheet'
-	      ),
-	      _react2.default.createElement(_Input2.default, { className: 'text-center' }),
-	      _react2.default.createElement(
-	        _Modal2.default,
-	        { id: 'cheatSheet', show: this.state.show, onHide: close, container: this, 'aria-labelledby': 'contained-modal-title' },
-	        _react2.default.createElement(
-	          _Modal2.default.Header,
-	          null,
-	          _react2.default.createElement(
-	            _Modal2.default.Title,
-	            { id: 'contained-modal-title' },
-	            'Markdown'
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _Modal2.default.Body,
-	          null,
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Emphasis'
-	          ),
-	          _react2.default.createElement(
-	            _Well2.default,
-	            null,
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '**bold**'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '*italics*'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '~~strikethrough~~'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Headings'
-	          ),
-	          _react2.default.createElement(
-	            _Well2.default,
-	            null,
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '# Big header'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '## Medium header'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '### Small header'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '#### Tiny header'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Lists'
-	          ),
-	          _react2.default.createElement(
-	            _Well2.default,
-	            null,
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '* Generic list item'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '* Generic list item'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '* Generic list item'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '1. Numbered list item'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '2. Numbered list item'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '3. Numbered list item'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Links'
-	          ),
-	          _react2.default.createElement(
-	            _Well2.default,
-	            null,
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '[Text to display](http://www.example.com)'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Quotes'
-	          ),
-	          _react2.default.createElement(
-	            _Well2.default,
-	            null,
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              'This is a quote.'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '> It can span multiple lines!'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Images'
-	          ),
-	          _react2.default.createElement(
-	            _Well2.default,
-	            null,
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '![](http://www.example.com/image.jpg)'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Tables'
-	          ),
-	          _react2.default.createElement(
-	            _Well2.default,
-	            null,
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '| Column 1 | Column 2 | Column 3 |'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '| -------- | -------- | -------- |'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '| John     | Doe      | Male     |'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '| Mary     | Smith    | Female   |'
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'h1',
-	            null,
-	            'Displaying Code'
-	          ),
-	          _react2.default.createElement(
-	            _Well2.default,
-	            null,
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '`var example = "hello!";`'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              'Or spanning multiple lines...'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '```'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              'var example = "hello!";'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              'alert(example);'
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              '```'
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _Modal2.default.Footer,
-	          null,
-	          _react2.default.createElement(
-	            _Button2.default,
-	            { onClick: close },
-	            'close'
-	          )
-	        )
-	      )
-	    );
-	  }
+					var close = function close() {
+							return _this.setState({ show: false });
+					};
+					return _react2.default.createElement(
+							'div',
+							{ id: 'layout', className: 'text-center modal-container' },
+							_react2.default.createElement(
+									'div',
+									{ id: 'mainTitle', className: 'text-left' },
+									_react2.default.createElement(
+											'h1',
+											null,
+											'Live Markdown Preview'
+									),
+									_react2.default.createElement('br', null),
+									_react2.default.createElement(
+											_Button2.default,
+											{ className: 'appBtn', onClick: function onClick() {
+															return _this.setState({ show: true });
+													} },
+											'CheatSheet'
+									)
+							),
+							_react2.default.createElement(_Input2.default, { className: 'text-center' }),
+							_react2.default.createElement(
+									_Modal2.default,
+									{ className: 'text-left', id: 'cheatSheet', show: this.state.show, onHide: close, container: this, 'aria-labelledby': 'contained-modal-title' },
+									_react2.default.createElement(
+											_Modal2.default.Header,
+											null,
+											_react2.default.createElement(
+													_Modal2.default.Title,
+													{ id: 'contained-modal-title' },
+													'Markdown'
+											)
+									),
+									_react2.default.createElement(
+											_Modal2.default.Body,
+											null,
+											_react2.default.createElement(
+													'h1',
+													null,
+													'Emphasis'
+											),
+											_react2.default.createElement(
+													_Well2.default,
+													null,
+													_react2.default.createElement(
+															'span',
+															null,
+															'**bold**'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'*italics*'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'~~strikethrough~~'
+													)
+											),
+											_react2.default.createElement(
+													'h1',
+													null,
+													'Headings'
+											),
+											_react2.default.createElement(
+													_Well2.default,
+													null,
+													_react2.default.createElement(
+															'span',
+															null,
+															'# Big header'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'## Medium header'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'### Small header'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'#### Tiny header'
+													)
+											),
+											_react2.default.createElement(
+													'h1',
+													null,
+													'Lists'
+											),
+											_react2.default.createElement(
+													_Well2.default,
+													null,
+													_react2.default.createElement(
+															'span',
+															null,
+															'* Generic list item'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'* Generic list item'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'* Generic list item'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'1. Numbered list item'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'2. Numbered list item'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'3. Numbered list item'
+													)
+											),
+											_react2.default.createElement(
+													'h1',
+													null,
+													'Links'
+											),
+											_react2.default.createElement(
+													_Well2.default,
+													null,
+													_react2.default.createElement(
+															'span',
+															null,
+															'[Text to display](http://www.example.com)'
+													)
+											),
+											_react2.default.createElement(
+													'h1',
+													null,
+													'Quotes'
+											),
+											_react2.default.createElement(
+													_Well2.default,
+													null,
+													_react2.default.createElement(
+															'span',
+															null,
+															'This is a quote.'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'> It can span multiple lines!'
+													)
+											),
+											_react2.default.createElement(
+													'h1',
+													null,
+													'Images'
+											),
+											_react2.default.createElement(
+													_Well2.default,
+													null,
+													_react2.default.createElement(
+															'span',
+															null,
+															'![](http://www.example.com/image.jpg)'
+													)
+											),
+											_react2.default.createElement(
+													'h1',
+													null,
+													'Tables'
+											),
+											_react2.default.createElement(
+													_Well2.default,
+													null,
+													_react2.default.createElement(
+															'span',
+															null,
+															'| Column 1 | Column 2 | Column 3 |'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'| -------- | -------- | -------- |'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'| John     | Doe      | Male     |'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'| Mary     | Smith    | Female   |'
+													)
+											),
+											_react2.default.createElement(
+													'h1',
+													null,
+													'Displaying Code'
+											),
+											_react2.default.createElement(
+													_Well2.default,
+													null,
+													_react2.default.createElement(
+															'span',
+															null,
+															'`var example = "hello!";`'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'Or spanning multiple lines...'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'```'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'var example = "hello!";'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'alert(example);'
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(
+															'span',
+															null,
+															'```'
+													)
+											)
+									),
+									_react2.default.createElement(
+											_Modal2.default.Footer,
+											null,
+											_react2.default.createElement(
+													_Button2.default,
+													{ className: 'appBtn', onClick: close },
+													'close'
+											)
+									)
+							)
+					);
+			}
 	});
 
 	exports.default = Layout;

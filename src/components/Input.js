@@ -27,11 +27,11 @@ class Input extends React.Component {
       <div>   
         <div id='appContainer' className='container-fluid'>
           <div className='row-fluid'>
-            <div className='col-xs-6'>
+            <div className='col-xs-6 displays'>
               <h1 className='text-center'>Markdown</h1>
               <textarea id='mdArea' onChange={this.update} placeholder={this.state.inputText}></textarea>
             </div>
-            <div className='col-xs-6'>
+            <div className='col-xs-6 displays'>
               <h1 className='text-center'>Output</h1>
               <div id='muArea' dangerouslySetInnerHTML={this.createMarkup()} />
             </div>
