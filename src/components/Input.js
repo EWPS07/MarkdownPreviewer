@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import marked from '../../node_modules/marked/lib/marked'
+import CheatSheet from './CheatSheet'
 
 class Input extends React.Component {
   constructor() {
@@ -23,12 +24,8 @@ class Input extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div>   
         <div id='appContainer' className='container-fluid'>
-          <div id='mainTitle' className='row-fluid'>
-            <h1>Live Markdown Preview</h1>
-            <button id='cheatSheetBtn' className='btn btn-info'>Markdown guide</button>
-          </div>
           <div className='row-fluid'>
             <div className='col-xs-6'>
               <h1 className='text-center'>Markdown</h1>
@@ -51,16 +48,3 @@ class Input extends React.Component {
 }
 
 export default Input
-
-
-
-// $(document).ready(function() {
-//   $('#cheatSheetBtn').click(function() {
-//     $('#app').addClass('hidden');
-//     $('#cheatSheet').removeClass('hidden');
-//   })
-//   $('#BackBtn').click(function() {
-//     $('#app').removeClass('hidden');
-//     $('#cheatSheet').addClass('hidden');
-//   })
-// });
